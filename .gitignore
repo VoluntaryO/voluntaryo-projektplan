@@ -29,5 +29,5 @@
 *.run.xml
 *.pdf
 
-*.fdb_latex
+*.fdb_latexmk
 *.fls
