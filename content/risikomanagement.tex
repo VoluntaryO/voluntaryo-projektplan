@@ -1,7 +1,126 @@
 \chapter{Risikomanagement}
 
 \section{Risiken}
-Detaillierte Auflistung der Risiken: TechnischeRisiken.xlsx
+
+\begin{table}[H]
+    \tablestyle
+    \tablealtcolored
+    \begin{tabularx}{\textwidth}{l p{2cm} X c c c X X}
+        \tableheadcolor
+            \tablehead Nr &
+            \tablehead Titel &
+            \tablehead Beschreibung &
+            \tablehead\rotatebox{90}{max. Schaden [h]} &
+            \tablehead\rotatebox{90}{Eintrittswahrscheinlichkeit} &
+            \tablehead\rotatebox{90}{Gewichteter Schaden} &
+            \tablehead Vorbeugung &
+            \tablehead Verhalten beim Eintreten
+        \tabularnewline
+        \tableend
+        \tablebody
+            \textit{R1} &
+            Microsoft-Technologien &
+            Der Umgang mit Microsofts Web-Entwicklungs Tools ist für einige Teammitglieder neu. Möglicherweise kann nicht das gesamte Team mit voller Produktivität arbeiten. &
+            48 &
+            25\% &
+            12 &
+            Kontinuierliches Aneignen von Know-How durch Tutorials und Dokumentationsseiten von Microsoft nach Absprache mit erfahrenen Teammitgliedern. Dies geschieht in der Elaborationsphase. &
+            Erfahrene Entwickler kümmern sich um die besonders anspruchsvollen und technologieabhängigen Arbeitspakete. 
+        \tabularnewline
+            \textit{R2} &
+            Webservice Verfügbarkeit &
+            Ein verwendeter Webservice verhält sich nicht erwartungskonform. Es könnte passieren, dass ein Service ausfällt oder fehlerhafte Daten liefert. &
+            30 &
+            5\% &
+            1.5 &
+            Layering der Komponenten für Datenimport. &
+            Unteren Layer austauschen, sodass Daten von einer alternativen Ressource importiert werden können.
+        \tabularnewline
+            \textit{R3} &
+            Team Foundation Server &
+            TFS-Workflow lässt sich nicht auf das Projekt anwenden. Deployment- und Entwicklungsprozesse sind zu komplex, bzw. stehen nicht im Kosten-/Nutzenverhältnis. &
+            30 &
+            20\% &
+            6 &
+            In der Elaborationsphase eine Arbeitsumgebung mit TFS einrichten und überprüfen, ob die gängigen Szenarien im Entwicklungsprozess umsetzbar sind. Zusätzlich Rücksprache mit Herrn Bläser nehmen. &
+            Verzicht auf TFS, Umstieg auf Jenkins, NANT
+        \tabularnewline
+    \tableend
+    \end{tabularx}
+    \caption{Technische Risiken (1/2)}
+\end{table}
+\begin{table}[H]
+    \tablestyle
+    \tablealtcolored
+    \begin{tabularx}{\textwidth}{l p{2cm} X c c c X X}
+        \tableheadcolor
+            \tablehead Nr &
+            \tablehead Titel &
+            \tablehead Beschreibung &
+            \tablehead\rotatebox{90}{max. Schaden [h]} &
+            \tablehead\rotatebox{90}{Eintrittswahrscheinlichkeit} &
+            \tablehead\rotatebox{90}{Gewichteter Schaden} &
+            \tablehead Vorbeugung &
+            \tablehead Verhalten beim Eintreten
+        \tabularnewline
+        \tableend
+        \tablebody
+            \textit{R4} &
+            Virtueller Server &
+            Kapazität/Leistung des Servers reicht nicht für das Projekt aus. &
+            8 &
+            10\% &
+            0.8 &
+            Systemanforderungen an TFS + Datenbankserver überprüfen. &
+            Mehr Ressourcen fordern.
+        \tabularnewline
+            \textit{R5} &
+            Webservice API &
+            Die API eines verwendeten Webservice ändert sich im Verlauf des Projekts. &
+            8 &
+            5\% &
+            0.4 &
+            Abstraktion der API durch den Einsatz von flexiblem Software-Design. Schreiben eines kleinen Prototypen für die Benutzung der Webservces, um Probleme bereits in der Ellaborationsphase zu erkennen. &
+            Neuen Adapter für API schreiben.
+        \tabularnewline
+            \textit{R6} &
+            Datenverlust &
+            Die gesamte geleistete Arbeit geht verloren. &
+            480 &
+            1\% &
+            4.8 &
+            Backups des Codes ausserhalb von TFS am Ende jeder Iteration. Dokumentation aller ausgeführten Schritte. &
+            Anhand von restlichen Daten und Dokumentation noch einmal neu anfangen.
+        \tabularnewline
+            \textit{R7} &
+            Architekturrisiken &
+            In der Construction-Phase stellt sich heraus, dass die Requirements teils nicht sinnvoll bzw. anwendbar sind. &
+            32 &
+            15\% &
+            4.8 &
+            Prototypen erstellen und Architektur-/Designentscheide bereits in der Elaborationsphase treffen und Grundgerüst implementieren. &
+            Abwägen, ob Kompromisse gemacht werden können oder nicht. Falls nicht, müssen grundlegende Änderungen am Produkt vorgenommen werden.
+        \tabularnewline
+            \textit{R8} &
+            Wissen auf eine Person konzentriert &
+            Das Wissen über Key-Parts ist auf eine Person konzentriert. Fällt diese aus, wird Zeit benötigt um das Wissen zu transferieren. &
+            24 &
+            25\% &
+            6 &
+            Am Ende jeder Iteration Wissen austauschen und sicherstellen, dass alle Teammitglieder verstehen was gemacht wurde. &
+            Möglichst schnell alle relevanten Informationen besorgen, um die Weiterarbeit am Projekt zu ermöglichen.
+        \tabularnewline 
+            \multicolumn{3}{l}{\textbf{Summe}} &
+            \textbf{660} &
+             &
+            \textbf{36,3} &
+             &
+             &
+    \tableend
+    \end{tabularx}
+    \caption{Technische Risiken (2/2)}
+\end{table}
+
 \section{Umgang mit Risiken}
 Die beschriebenen Risiken aufgrund einer ersten Einschätzung aufgestellt.
 Jeweils zu Beginn einer neuen Iteration werden die Risiken neu betrachtet und beurteilt. Möglicherweise lassen sich im Verlauf des Projekts einige Risiken ausschliessen oder neue kommen hinzu.

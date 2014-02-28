@@ -18,18 +18,27 @@
     \newpage
 
     \section*{Änderungshistorie}
-    \begin{tabularx}{\textwidth}{l l X r}
-    \tableheadcolor
-        \tablehead Version & \tablehead Datum & \tablehead Änderung & \tablehead Person \\  
-    \tablebody
-        v1.0 & 22.02.2014 & Initialisierung & All \\  
-        \hline 
-        v1.1 & 23.02.2014 & Anpassungen Kapitel „Projekt Übersicht“ & p1meier \\
-        \hline 
-        v1.2 & 28.02.2014 & Portierung nach {\LaTeX} & p1meier \\
-        \hline 
-    \tableend
-    \end{tabularx} 
+    \begin{table}[H]
+        \tablestyle
+        \tablealtcolored
+        \begin{tabularx}{\textwidth}{l l X r}
+        \tableheadcolor
+            \tablehead Version & 
+            \tablehead Datum & 
+            \tablehead Änderung & 
+            \tablehead Person \\  
+        \tablebody
+            v1.0 & 22.02.2014 & Initialisierung & All \\  
+            \hline 
+            v1.1 & 23.02.2014 & Anpassungen Kapitel „Projekt Übersicht“ & p1meier \\
+            \hline 
+            v1.2 & 28.02.2014 & Portierung nach {\LaTeX} & p1meier \\
+            \hline 
+            v1.3 & 28.02.2014 & Technische Risiken aus Excel eingefügt & p1meier \\
+            \hline 
+        \tableend
+        \end{tabularx} 
+    \end{table}
     \newpage
 
     \input{content/einfuehrung}
