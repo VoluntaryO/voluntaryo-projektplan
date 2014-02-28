@@ -1,0 +1,40 @@
+\documentclass{template/document}
+\input{template/document.sty}
+
+\newcommand\documentTitle{Template\\ Projekt VoluntaryO}
+\newcommand\documentAuthorA{Dominik Freier}
+\newcommand\documentAuthorB{Nhat-Nam Le}
+\newcommand\documentAuthorC{Philipp Meier}
+\newcommand\documentAuthorD{Robin Bader}
+\newcommand\documentSubject{Software Engineering 2 - Projekt}
+
+\makeindex
+
+\begin{document}
+ 
+    \input{template/title}
+
+    \tableofcontents
+    \newpage
+
+    \section*{Änderungshistorie}
+    \begin{tabularx}{\textwidth}{l l X r}
+    \tableheadcolor
+        \tablehead Version & \tablehead Datum & \tablehead Änderung & \tablehead Person \\  
+    \tablebody
+        v1.0 & 19.02.2014 & Dokument erstellt & kürzel \\  
+        \hline 
+        v1.1 & 19.02.2014 & -- & kürzel \\
+        \hline 
+        v1.2 & 19.02.2014 & -- & kürzel \\
+    \tableend
+    \end{tabularx} 
+    \newpage
+
+    \chapter{Ein Titel}
+    \section{Ein Untertitel}
+
+    \input{template/playground}
+    
+    
+\end{document}

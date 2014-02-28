@@ -1,0 +1,209 @@
+\chapter{Playground}
+\section{A Playground section}        
+
+\subsection{hoi test SUBSUB Section}
+\subsubsection{hoi test SUBSUB Section}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+
+In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+
+Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+
+\section{Code Listings}
+\begin{lstlisting}[language=CSharp, caption=Hello World in C\#, label=lst:helloWorldCSharp, firstnumber=1]
+// A Hello World! program in C#.
+using System;
+namespace HelloWorld
+{
+    class Hello 
+    {
+        static void Main() 
+        {
+            Console.WriteLine("Hello World!");
+
+            // Keep the console window open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=JavaScript, caption=JavaScript Hello Wordl, label=lst:helloWorldJavaScript, firstnumber=1]
+//Ausgabe von Hallo Welt! mit einer Alert-Box
+alert("Hallo Welt!");
+\end{lstlisting}
+
+\section{Text}
+Eine ``Beispiel'' Auflistung
+\begin{itemize}
+    \item Item mit \emph{krusivem} Text
+    \item Item mit \textbf{fettem} Text
+\end{itemize}
+
+\subsection{Bild}
+\begin{figure}[ht]
+    \includegraphics[height=5cm]{template/images/hsrlogo.png}
+    \caption{HSR Logo}
+\end{figure}
+
+
+\chapter{Tables}
+\section{Meilensteine}
+
+\begin{table}[H]
+    \tablestyle
+    \tablealtcolored
+    \begin{tabularx}{\textwidth}{l l l X}
+        \tableheadcolor
+            \tablehead ID &
+            \tablehead Meilenstein &
+            \tablehead Termin &
+            \tablehead Beschreibung \tabularnewline
+        \tablebody
+            \textit{M1}\label{M1} & Ende Inception & 07.03.2014
+                & bla bla bla \tabularnewline
+            \textit{M2} & Ende Elaboration & 17.03.2014
+                & Bla bla bla \tabularnewline
+            \textit{..} & .. & ..
+                & .. \tabularnewline
+            \textit{..} & .. & ..
+                & .. \tabularnewline
+        \tableend
+    \end{tabularx}
+    \caption{Meilensteine}
+\end{table}
+
+\begin{table}[H]
+    \tablestyle
+    \tablealtcolored
+    \begin{tabularx}{\textwidth}{l X l}
+        \tableheadcolor
+            \tablehead Topic &
+            \tablehead Erläuterung \tabularnewline
+        \tablebody
+        \textit{Lorem 1} &
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+            \tabularnewline
+        \textit{Lorem 2} &
+            In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+            \tabularnewline
+        \textit{Lorem 3} &
+            Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+            \tabularnewline
+        \tableend
+    \end{tabularx}
+    \caption{Topic Listing}
+\end{table}
+
+\begin{table}[H]
+    \newcolumntype{s}{>{\centering\hsize=0.15\hsize}X}
+    \tablestyle
+    \tablealtcolored
+    \begin{tabularx}{\textwidth}{X s s s s s s s}
+        \tableheadcolor
+            \tablehead &
+            \rotatebox{90}{\bfseries\textit{TK1 Eigenkonzepte} } &
+            \rotatebox{90}{\bfseries\textit{TK2 Eignung}} &
+            \rotatebox{90}{\bfseries\textit{TK3 Produktreife}} &
+            \rotatebox{90}{\bfseries\textit{TK4 Aktualität}} &
+            \rotatebox{90}{\bfseries\textit{TK5 ``Ease of use''}} &
+            \rotatebox{90}{\bfseries\textit{TK6 Testbarkeit}} &
+            \rotatebox{90}{\bfseries\textit{Gesamtbewertung}}
+            \tabularnewline
+        \tablebody
+            \textit{Ruby on Rails} &
+            \oneStar &
+            \oneStar &
+            \threeStars &
+            \oneStar &
+            \threeStars &
+            \twoStars &
+            4
+            \tabularnewline
+        \tableend
+    \end{tabularx}
+    \caption{Bewertung Ruby on Rails}
+\end{table}
+
+\begin{figure}[H]
+    \begin{table}[H]
+        \tablestyle
+        \tablealtcolored
+        \begin{tabularx}{\textwidth}{l c c X}
+            \tableheadcolor
+                \tablehead Richtlinie &
+                \tablehead\rotatebox{90}{Nutzen} &
+                \tablehead\rotatebox{90}{Demonstriert\hspace{3mm}} &
+                \tablehead Bemerkung
+                \tabularnewline
+            \tablebody
+                Richtline 1 & \faSmile & \faOk & Wiederverwendbare API umgesetzt\tabularnewline
+                Richtline 2 & \faSmile & \faOk & Facebook als Identity-Provider\tabularnewline
+                Richtline 3 & \faMeh & \faOk & \tabularnewline
+                Richtline 4 & \faSmile & \faOk & Make\tabularnewline
+            \tableend
+        \end{tabularx}
+    \end{table}
+    \caption{Übersicht Architekturrichtlinienanalyse (2/2)}
+    \label{tab:overview-principle-demonstration-2}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{table}[H]
+        \tablestyle
+        \tablealtcolored
+        \begin{tabularx}{\textwidth}{X | c c c c c | c c c c | c c}
+            \tableheadcolor
+                \tablehead &
+                \multicolumn{5}{c|}{\bfseries\textit{Backend}} &
+                \multicolumn{4}{c|}{\bfseries\textit{Frontend}} &
+                \bfseries\textit{Tools}
+                \tabularnewline
+            \tableheadcolor
+                \tablehead &
+                \rotatebox{90}{Models} &
+                \rotatebox{90}{Businesslogik} &
+                \rotatebox{90}{Autentifizierung} &
+                \rotatebox{90}{Rendering Engine} &
+                \rotatebox{90}{Service Interface} &
+                \rotatebox{90}{HTML Markup} &
+                \rotatebox{90}{CSS Styling} &
+                \rotatebox{90}{JavaScript Code} &
+                \rotatebox{90}{Struktur} &
+                \xspace
+                \tabularnewline
+            \tablebody
+                RP1 REST & & & & & \faOk & & & & & \tabularnewline
+                RP2 Application logic & & \faOk & & & & & & & & \tabularnewline
+                RP3 HTTP & & & & & \faOk & & & & & \tabularnewline
+                RP4 Link & & & & & \faOk & & & & \faOk & \tabularnewline
+                RP5 Non-Browser & & & & & \faOk & & & & & \tabularnewline
+                RP6 Should-Formats & & & & & \faOk & & & & & \tabularnewline
+                RP7 Auth & & & \faOk & & & & & & & \tabularnewline
+                RP8 Cookies & & & \faOk & & \faOk & & & & & \tabularnewline
+                RP9 Session & & & \faOk & & & & & & \faOk & \tabularnewline
+                RP10 Browser-Controls & & & & \faOk & & & & \faOk & \faOk & \tabularnewline
+                RP11 POSH & & & & \faOk & & \faOk & \faOk & & & \tabularnewline
+                RP12 Accessibility & & & & \faOk & & \faOk & \faOk & & & \tabularnewline
+                RP13 Progressive Enhancement & & & & & & \faOk & \faOk & \faOk & & \tabularnewline
+                RP14 Unobtrusive JavaScript & & & & & & \faOk & & \faOk & & \tabularnewline
+                RP15 No Duplication & \faOk & \faOk & & \faOk & &  \faOk &  \faOk & \faOk & & \tabularnewline
+                RP16 Know Structure & & & & & \faOk & \faOk & \faOk & & & \tabularnewline
+                RP17 Static Assets & & & & & & & \faOk & \faOk & & \faOk \tabularnewline
+                RP18 History API & & & & & & & & \faOk & & \tabularnewline
+                TP3 Eat your own API dog food & & & & & \faOk & & & & & \tabularnewline
+                TP4 Separate user identity and sign-up (...) & & & \faOk & & & & & & & \tabularnewline
+                TP7 Apply the Web instead of working around & & & & & \faOk & \faOk & \faOk & \faOk & \faOk & \tabularnewline
+                TP8 Automate everything or you will be hurt & & & & & & & & & & \faOk \tabularnewline
+            \tableend
+        \end{tabularx}
+    \end{table}
+    \caption{Mapping Architekturrichtlinien - Systemkomponenten}
+    \label{fig:how-to-show-principles-matrix}
+\end{figure}
+
+
+\chapter{New Page}
+\newpage
+\section{New Paged}

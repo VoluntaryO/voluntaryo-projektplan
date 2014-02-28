@@ -1,0 +1,63 @@
+\newcommand\documentTerm{Frühjahrssemester 2014}
+\newcommand\documentSchool{Hochschule für Technik Rapperswil}
+\newcommand\documentProfessor{Prof. Dr.  Luc Bläser}
+\newcommand\documentCrossReader{tbd}
+
+\hypersetup{
+    pdfauthor={\documentAuthorA, \documentAuthorB, \documentAuthorC, \documentAuthorD},
+    pdftitle={\documentTitle},
+    pdfsubject={\documentSubject}
+}
+
+\begin{titlepage}
+    % Page Settings:
+    \newgeometry{top=110mm,right=30mm,bottom=20mm,left=30mm}
+    \backgroundsetup{scale=1,angle=0,opacity=1,contents={
+        \begin{tikzpicture}[remember picture,overlay]
+            \path [fill=titlepagecolor]
+            (0,-175mm)circle[x radius=290mm, y radius=250mm];
+            \node [anchor=south west] (image) at (-0.5\paperwidth+8mm,0.5\paperheight-39mm) {\includegraphics[height=25mm]{template/images/hsrlogo.png}};
+        \end{tikzpicture}}
+    }
+
+    % Apply Page settings:
+    \thispagestyle{empty}
+    \BgThispage
+
+    % Content:
+    \sffamily\color{titlepagefontcolor}
+    \begin{center}
+        \Large
+        \documentSubject\\[5mm]
+
+        \Huge\bfseries
+        \documentTitle\\[15mm]
+
+        \large\normalfont\sffamily
+        \documentSchool\\[1mm]
+        \documentTerm\\[15mm]
+
+        \vfill
+        \normalsize\normalfont\sffamily
+        Erstellt: \today, \currenttime\\[10mm]
+    \end{center}
+
+
+    \begin{multicols}{2}
+
+        \begin{tabularx}{\textwidth}{X}
+            \bfseries \documentAuthorA\tabularnewline
+            \bfseries \documentAuthorB\tabularnewline
+            \bfseries \documentAuthorC\tabularnewline
+            \bfseries \documentAuthorD\tabularnewline
+        \end{tabularx}
+
+        \begin{tabularx}{\textwidth}{l X}
+            \bfseries Betreuer & \documentProfessor\tabularnewline
+            \bfseries Gegenleser & \documentCrossReader\tabularnewline
+        \end{tabularx}
+    \end{multicols}
+
+\end{titlepage}
+
+\restoregeometry
