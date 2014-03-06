@@ -19,9 +19,9 @@ Die JIRA-Instanz ist erreichbar über diese URL:
 Der gesamte Quellcode des Projekts wird mithilfe von Visual Studio Online verwaltet und versioniert. Wir setzen dabei auf das Cloud-Angebot von \href{http://www.visualstudio.com/}{Visual Studio Online} 
 \\Es darf nur Code veröffentlicht werden, der einen sinnvollen Zwischenstand darstellt und der lauffähig und getestet ist.
 
-\subsection{Unit Testing}
-Während der Entwicklung sollten für alle Funktionen, bei denen es sinnvoll ist, Unit-Tests durchgeführt. Bevor der Quellcode eingecheckt werden kann müssen diese Tests erfolgreich sein.
-\\Das Bereitstellen eines möglichen Unit-Tests ist integraler Bestandteil eines Arbeitspaketes.
+\subsection{Testing}
+Während der Entwicklung sollten für alle Funktionen, bei denen es sinnvoll ist, Unit-Tests durchgeführt werden. Bevor der Quellcode eingecheckt werden kann, müssen diese Tests erfolgreich durchlaufen sein.
+\\Das Bereitstellen eines möglichen Unit-Tests ist integraler Bestandteil eines Arbeitspaketes. 
 \begin{table}[H]
     \tablestyle
     \tablealtcolored
@@ -29,6 +29,8 @@ Während der Entwicklung sollten für alle Funktionen, bei denen es sinnvoll ist
         \tablebody
         \textbf{Unit Testing} &
             Während der Entwicklung sollten für alle Funktionen, bei denen es sinnvoll ist, Unit-Tests durchgeführt. Bevor der Quellcode eingecheckt werden kann müssen diese Tests erfolgreich sein.
+          \textbf{Integritätstests} &
+            Nach der Implementation von zusammenhängenden Objekten, wird deren Schnittstelle durch Integritätstests geprüft.
             \tabularnewline
         \textbf{System Testing} &
             Nach jeder abgeschlossenen Iteration wird der aktuelle Build ausgiebig getestet. Daraus resultiert ein Testbericht. Aus den resultierenden Fehlern werden Incidents eröffnet.
