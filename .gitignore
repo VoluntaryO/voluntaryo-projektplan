@@ -28,6 +28,7 @@
 *.bcf
 *.run.xml
 *.pdf
+Thumds.db
 
 *.fdb_latexmk
 *.fls
