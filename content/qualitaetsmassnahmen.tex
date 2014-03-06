@@ -15,7 +15,7 @@ getracked und gemanaged. Die Arbeitspakete werden in JIRA erfassst, priorisiert,
 Die JIRA-Instanz ist erreichbar über diese URL: 
 \\\url{http://sinv-56086.edu.hsr.ch:40010}
 
-\section{Entwicklung}
+\section{Entwicklungs-/ Konfigurationsmanagement}
 Der gesamte Quellcode des Projekts wird mithilfe von Visual Studio Online verwaltet und versioniert. Wir setzen dabei auf das Cloud-Angebot von \href{http://www.visualstudio.com/}{Visual Studio Online} 
 \\Es darf nur Code veröffentlicht werden, der einen sinnvollen Zwischenstand darstellt und der lauffähig und getestet ist.
 
@@ -47,9 +47,55 @@ Dabei nutzen wir insbesondere das Build Feature für Continuous Builds um die Qu
 
 \subsection{Code Reviews}
 Um die Motivation zur Erstellung von wartbarem Code und den Austausch von Programmiertechniken zu fördern, werden wir unseren Code gegenseitig Reviewen. Der Quellcode jedes Teammitglieds wird zum Review freigegeben und dabei von mindestens einem anderen Teammitglied kontrolliert. An gemeinsamen Code-Review-Sitzungen werden die Änderungsvorschläge durchgesprochen und in einem Review-Protokoll festgehalten.
-\\ Folgende Kriterien werden untersucht:
+\\Folgende Kriterien werden untersucht:
 \\\begin{itemize}
     \item Einhaltung der Code-Richtlinien
     \item Existenz von „Code Smells“
     \item Nachvollziehbarkeit des Codes
 \end{itemize}
+
+\subsection{Code Style Guidelines}
+Die Guidelines für den Code werden direkt vom Microsoftstandard übernommen: 
+\\-
+\begin{itemize}
+	\item \href{http://msdn.microsoft.com/en-us/library/ff926074.aspx}{C\# Coding Conventions}
+	\item \href{http://msdn.microsoft.com/en-us/library/xzf533w0(v=vs.71).aspx}{Naming Guidelines}
+\end{itemize}
+Jeglicher Code und Kommentare werden in Englisch erfasst.
+\\Folgend ein Beispiel, dass die Richtlinien visualisieren soll:
+\begin{lstlisting}[language=CSharp, caption=Hello World in C\#, label=lst:helloWorldCSharp, firstnumber=1]
+using System;
+
+namespace MyExampleNamespace
+{
+    public class Customer : IDisposable
+    {
+        private string _customerName;
+        public string CustomerName 
+        { 
+            get 
+            { 
+                return _customerName; 
+            }
+            set
+            {
+                _customerName = value;
+                _lastUpdated = DateTime.Now;
+            }
+        }
+
+        public void UpdateCustomer(string newName)
+        {
+            if (!newName.Equals(CustomerName))
+            {
+                CustomerName = newName;
+            }
+        }
+ -
+        public void Dispose()
+        {
+            //Do nothing
+        }
+    }
+}
+\end{lstlisting}
