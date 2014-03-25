@@ -1,3 +1,4 @@
+%!TEX root = ../projektplan.tex
 \chapter{Management Abläufe}
 
 \section{Kostenvoranschlag}
@@ -71,6 +72,7 @@ Wir werden in unserem Projekt nach dem Unified Process arbeiten. Die beinhaltet 
             \end{itemize} &
             \begin{itemize}
                 \item Abgabe MS2-RV. Projektplan
+                \item MS3-RV. Anforderungen und Analyse
             \end{itemize} &
             2-4
         \tabularnewline
@@ -83,7 +85,7 @@ Wir werden in unserem Projekt nach dem Unified Process arbeiten. Die beinhaltet 
                 \item Fertigstellung Architektur-Prototyps
             \end{itemize} &
             \begin{itemize}
-                \item MS3-RV. Anforderungen und Analyse
+                \item MS4-RV. Ende Elaboration
             \end{itemize} &
             5-6
         \tabularnewline
@@ -97,9 +99,7 @@ Wir werden in unserem Projekt nach dem Unified Process arbeiten. Die beinhaltet 
                     \end{itemize}
                 \item Anpassungen gemäss Designreview
             \end{itemize} &
-            \begin{itemize}
-                \item MS4-RV. Ende Elaboration
-            \end{itemize} &
+            &
             7-8
         \tabularnewline
         \tableend
@@ -122,14 +122,11 @@ Wir werden in unserem Projekt nach dem Unified Process arbeiten. Die beinhaltet 
                 \item Externes Design anpassen
                 \item Implementationen erweitern
                     \begin{itemize}
-                        \item Unit Testing
                         \item Helfereinsätze importieren
                         \item Einsatzverwaltung
                     \end{itemize}
             \end{itemize} &
-            \begin{itemize}
-                \item MS5-RV. Architektur/Design
-            \end{itemize} &
+             &
             9-10
         \tabularnewline
             \textit{Construction C3} &
@@ -143,7 +140,7 @@ Wir werden in unserem Projekt nach dem Unified Process arbeiten. Die beinhaltet 
                 \item Reserven für Risiken
             \end{itemize} &
             \begin{itemize}
-                \item MS6-RV. Release Candidate
+                \item MS5-RV. Architektur/Design
             \end{itemize} &
             11-12
         \tabularnewline
@@ -153,7 +150,7 @@ Wir werden in unserem Projekt nach dem Unified Process arbeiten. Die beinhaltet 
                 \item Abschlussbericht verfassen
             \end{itemize} &
             \begin{itemize}
-                \item MS7 Schlusspräsentation/-abgabe
+                \item MS6 Schlusspräsentation/-abgabe
             \end{itemize} &
             13-14
         \tabularnewline
@@ -218,7 +215,7 @@ Wir werden in unserem Projekt nach dem Unified Process arbeiten. Die beinhaltet 
         \tablehead Termin &
             13.03.14 (SW04) \tabularnewline
         \tablehead Phase &
-            E2
+            E1
             \tabularnewline
         \tablehead Beschreibung  &
             Review der Anforderungsspezifikation und Analyse \tabularnewline
@@ -244,7 +241,7 @@ Wir werden in unserem Projekt nach dem Unified Process arbeiten. Die beinhaltet 
         \tablehead Termin &
             27.03.14 (SW06) \tabularnewline
         \tablehead Phase &
-            C1 \tabularnewline
+            E2 \tabularnewline
         \tablehead Beschreibung  &
             Review der Dokumente und vorhandenen Code aus E1 \& E2 \tabularnewline
         \tablehead Deliverables  &
@@ -264,15 +261,17 @@ Wir werden in unserem Projekt nach dem Unified Process arbeiten. Die beinhaltet 
     \begin{tabularx}{\textwidth}{l X}
         \tablebody
         \tablehead Termin &
-            10.04.14 (SW08) \tabularnewline
+            01.05.14 (SW11) \tabularnewline
         \tablehead Phase &
-            C2 \tabularnewline
+            C3 \tabularnewline
         \tablehead Beschreibung  &
            Review der Architektur/Design \tabularnewline
         \tablehead Deliverables  &
         	\begin{itemize}
                 \item Dokument Architektur/Design
                 \item Testplan
+                \item Code RC Version
+                \item Protokoll Code\-Reviews
             \end{itemize}
             \tabularnewline
         \tableend
@@ -280,31 +279,7 @@ Wir werden in unserem Projekt nach dem Unified Process arbeiten. Die beinhaltet 
     \caption{MS5 Architektur/Design}
 \end{table}
 
-\subsection{MS6 Release Candiate}
-\begin{table}[H]
-    \tablestyle
-    \tablealtcolored
-    \begin{tabularx}{\textwidth}{l X}
-        \tablebody
-        \tablehead Termin &
-            01.05.14 (SW11) \tabularnewline
-        \tablehead Phase &
-            C3
-            \tabularnewline
-        \tablehead Beschreibung  &
-            Review des Release Candidates \tabularnewline
-        \tablehead Deliverables  &
-        	\begin{itemize}
-                \item Code RC Version
-                \item Protokoll Code-Reviews
-            \end{itemize}
-            \tabularnewline
-        \tableend
-    \end{tabularx}
-    \caption{MS6 Release Candiate}
-\end{table}
-
-\subsection{MS7 Schlusspräsentation/-abgabe}
+\subsection{MS6 Schlusspräsentation/-abgabe}
 \begin{table}[H]
     \tablestyle
     \tablealtcolored
@@ -326,13 +301,13 @@ Wir werden in unserem Projekt nach dem Unified Process arbeiten. Die beinhaltet 
             \tabularnewline
         \tableend
     \end{tabularx}
-    \caption{MS7 Schlusspräsentation/-abgabe}
+    \caption{MS6 Schlusspräsentation/-abgabe}
 \end{table}
 
 \section{Besprechungen}
 Es wird wöchentlich mindestens eine fixe Teamsitzung mit allen Projektbeteiligten durchgeführt. Diese wird jeweils am Donnerstag stattfinden und zwischen ein bis zwei Stunden andauern. 
 \\Sie dienen dem Zweck, getätigte Arbeiten mitzuteilen, bevorstehende Arbeiten gemeinsam zu planen und offene Fragen zu beantworten. Falls nötig, können weitere Sitzungen einberufen werden. 
-\\Protokolle werden jeweils auf \url{http://www.minutes.io}{www.minutes.io} geführt und per E-mail an alle Projektmitarbeiter verteilt.
+\\Protokolle werden jeweils auf \href{http://www.minutes.io}{www.minutes.io} geführt und per E-mail an alle Projektmitarbeiter verteilt.
 \\\begin{enumerate}
 	\item Was haben wir erledigt?
 	\item Welche nächsten Schritte stehen an?
